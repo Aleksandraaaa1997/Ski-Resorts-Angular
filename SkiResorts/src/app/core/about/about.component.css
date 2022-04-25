@@ -1,0 +1,41 @@
+*{
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 60vh;
+}
+h1{
+    padding-top: 0.2em;
+    color: rgb(13, 61, 107);
+    font-size: 30px;
+}
+.description{
+    
+    text-align: justify;
+    padding: 0;
+    color: rgb(20, 82, 139);
+    padding-right: 2em;
+    padding-left: 2em;
+}
+h4{
+    font-weight: 300;
+    font-size: 18px;
+}
+span{
+    color: rgb(20, 82, 139);
+    font-weight: 700;
+}
+.the-end{
+    color: rgb(20, 82, 139);
+}
+.the-end h4{
+    font-size: 25px;
+    color: rgb(13, 61, 107);
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-weight: 500;
+}

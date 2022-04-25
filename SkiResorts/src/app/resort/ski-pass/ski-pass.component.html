@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Days</th>
+          <th scope="col">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pass of skiPass">
+          <td>{{pass.duration}}</td>
+          <td>{{pass.price}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-8">
+    <form>
+      <div class="mb-3">
+        <label for="firstNameInput" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstNameInput" [(ngModel)]="reservation.firstName"
+          name="firstNameInput" placeholder="Enter Your First Name">
+      </div>
+      <div class="mb-3">
+        <label for="lastNameInput" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastNameInput" [(ngModel)]="reservation.lastName"
+          name="lastNameInput" placeholder="Enter Your Last Name">
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <div class="col-12">
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="dpFrom" [(ngModel)]="reservation.dateFrom"
+                ngbDatepicker #dFrom="ngbDatepicker" (dateSelect)="onDateChanged()">
+              <button class="btn btn-outline-secondary calendar" (click)="dFrom.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="col-12">
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="dpTo" [(ngModel)]="reservation.dateTo"
+                ngbDatepicker #dTo="ngbDatepicker" (dateSelect)="onDateChanged()">
+              <button class="btn btn-outline-secondary calendar" (click)="dTo.toggle()" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="priceInput" class="form-label">Price</label>
+        <input type="text" class="form-control" id="priceInput" [(ngModel)]="reservation.price" name="priceInput"
+          disabled>
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="onSubmit()"
+        [disabled]="!reservation.price">Reserve</button>
+    </form>
+  </div>
+</div>

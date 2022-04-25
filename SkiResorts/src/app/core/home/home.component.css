@@ -1,0 +1,36 @@
+*{
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+.home {
+    height: 60vh;
+}
+.title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-bottom: 0.2em;
+    padding-top: 2em;
+    color: rgb(13, 61, 107);
+}
+h1{
+    font-size: 30px;
+    font-weight: 500;
+}
+h3{
+    font-size: 22px;
+}
+.description {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding-right: 2em;
+    padding-left: 2em;
+    color: rgb(20, 82, 139);
+}
+h4 {
+    text-align: justify;
+    font-size: 18px;
+    font-weight: 300;
+}

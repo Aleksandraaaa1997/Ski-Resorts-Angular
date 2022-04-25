@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-4">
+        <img src="{{resort.picture}}" width="100%">
+    </div>
+    <div class="col-8">
+        <span>
+            <span class="resort-name">{{resort.name}}</span>
+            <span class="resort-country">, {{resort.country}}</span>
+        </span>
+        <p class="resort-description">{{resort.description}}</p>
+    </div>
+</div>
+<div class="row">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs text-center">
+        <li [ngbNavItem]="1" class="col-4">
+          <a ngbNavLink>Tracks</a>
+          <ng-template ngbNavContent>
+            <app-tracks [tracks]="tracks" (sortChange)="onTrackSort($event)"></app-tracks>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2" class="col-4">
+          <a ngbNavLink>Weather</a>
+          <ng-template ngbNavContent>
+                
+            <div class="row">
+              <div class="col-2" *ngFor="let w of weather">
+                <app-weather [weather]="w"></app-weather>
+              </div>
+
+            </div>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3" class="col-4">
+          <a ngbNavLink>Ski-Pass</a>
+          <ng-template ngbNavContent>
+            <app-ski-pass [skiPass]="skiPass" [resortId]="resortId"></app-ski-pass>
+          </ng-template>
+        </li>
+      </ul>
+</div>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

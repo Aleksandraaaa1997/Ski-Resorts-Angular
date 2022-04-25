@@ -1,0 +1,18 @@
+*{
+    font-family: 'Times New Roman', Times, sans-serif;
+}
+
+.resort-name {
+    font-size: 30px;
+    color: rgb(17, 71, 121);
+}
+
+.resort-country {
+    font-size: 20px;
+    color: rgb(17, 71, 121);
+}
+
+.resort-description{
+    font-size: 18px;
+    color: rgb(20, 82, 139);
+}
